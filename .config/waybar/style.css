@@ -1,0 +1,100 @@
+/*-----------------------------------------------------------------------------------------------------------*/
+/* seven's Catppuccin Mocha Flamingo themed-css for waybar. Credits go to https://github.com/rubyowo/dotfiles*/
+/*-----------------------------------------------------------------------------------------------------------*/
+
+@import "mocha.css";
+
+* {
+  font-family: "DMMono Nerd Font";
+  font-size: 17px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: @text;
+  margin: 5px 5px;
+}
+
+#workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @base-transparent;
+}
+
+#workspaces button {
+  color: @overlay0;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+#workspaces button.active {
+  color: @flamingo;
+  border-radius: 1rem;
+}
+
+#workspaces button:hover {
+  color: @rosewater;
+  border-radius: 1rem;
+}
+
+#custom-musicplayer,
+#custom-music,
+#pulseaudio,
+#custom-lightcontrol,
+#custom-battery,
+#network,
+#custom-time,
+#custom-date,
+#custom-lock,
+#custom-reboot,
+#custom-power {
+  background-color: @base-transparent;
+  padding: 0.3rem 0.8rem;
+  margin: 5px 0px;
+}
+
+#custom-musicplayer {
+  color: @lavender;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+#custom-music {
+  color: @mauve;
+  border-radius: 0px 1rem 1rem 0px;
+}
+#pulseaudio {
+  color: @red;
+  border-radius: 1rem 0px 0px 1rem;
+}
+#custom-lightcontrol {
+  color: @maroon;
+}
+#custom-battery {
+  color: @peach;
+}
+#network {
+  color: @yellow;
+}
+#custom-time {
+  color: @green;
+}
+#custom-date {
+  color: @teal;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+}
+
+#custom-lock {
+  border-radius: 1rem 0px 0px 1rem;
+  color: @sky;
+}
+#custom-reboot {
+  color: @sapphire;
+}
+#custom-power {
+  padding-right: 1rem;
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
+  color: @blue;
+}

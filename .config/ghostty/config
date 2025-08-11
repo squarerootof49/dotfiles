@@ -1,0 +1,13 @@
+#----------------------------
+# seven's config for ghostty.
+#----------------------------
+
+theme = catppuccin-mocha-flamingo.conf
+shell-integration = zsh
+clipboard-read = allow
+clipboard-write = allow
+copy-on-select = true
+window-title-font-family = DM Mono Nerd Font
+window-vsync = false
+mouse-hide-while-typing = true
+gtk-wide-tabs = false

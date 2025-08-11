@@ -1,0 +1,114 @@
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* seven's Catppuccin Mocha - Flamingo Wofi theme edit. Credits for the base I edited go to https://github.com/quantumfate/wofi */
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+@define-color flamingo  rgba(242, 205, 205, 0.95);
+@define-color flamingofade  rgba(242, 205, 205, 0.1);
+@define-color text  rgba(205, 214, 244, 0.95);
+@define-color surface0  rgba(49, 50, 68, 0.95);
+@define-color base  rgba(30, 30, 46, 0.95);
+
+* {
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+}
+
+/* Window */
+window {
+  margin: 0px;
+  padding: 10px;
+  /*   border: 1px solid @flamingo; */
+  border: none;
+  border-radius: 12px;
+  background-color: @base;
+}
+
+/* Outer Box */
+#outer-box {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: none;
+}
+
+/* Inner Box */
+#inner-box {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: none;
+}
+
+/* Input */
+#input {
+  background-color: @basefake;
+  color: @flamingo;
+  border: 0.5px solid @flamingo;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Scroll */
+#scroll {
+  padding: 4px;
+  background-color: none;
+}
+
+#entry {
+  background-color: none;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  border: 1px solid transparent;
+}
+
+#entry label {
+  color: @text;
+}
+
+#entry:hover {
+  background-color: @surface0;
+  border: 1px solid @flamingo;
+}
+
+#entry arrow {
+  border: none;
+  color: @flamingo;
+}
+
+/* Selected Entry */
+#entry:selected {
+  background-color: @flamingofade;
+  border-radius: 4px;
+  border: 0.5px solid @flamingo;
+  outline: none;
+}
+
+#entry:selected label {
+  color: @flamingo;
+}
+
+#entry image {
+  margin-left: 6px;
+  margin-right: 10px;
+}
+
+#entry:drop(active) {
+  background-color: @flamingo !important;
+}
+
+#input image {
+  border: none;
+  color: @flamingo;
+}
+
+/* Text */
+#text {
+  margin: 5px;
+  border: none;
+  color: @text;
+}

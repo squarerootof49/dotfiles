@@ -1,0 +1,96 @@
+//---------------------------
+// seven's config for waybar.
+//---------------------------
+
+//WARNING: this config is supposed to be used in conjunction with my custom scripts. See the ./scripts folder.
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["custom/musicplayer", "custom/music"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "pulseaudio",
+    "custom/lightcontrol",
+    "custom/battery",
+    "network",
+    "custom/time",
+    "custom/date",
+    "custom/lock",
+    "custom/reboot",
+    "custom/power"
+  ],
+  "custom/musicplayer": {
+    "format": " ",
+    "tooltip": false,
+    "escape": true,
+    "on-click": "playerctl play-pause"
+  },
+  "custom/music": {
+    "format": " {}",
+    "escape": true,
+    "interval": 5,
+    "tooltip": false,
+    "exec": "playerctl metadata --format='{{ title }}'",
+    "max-length": 50
+  },
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "persistent-workspaces": {
+      "*": 4
+    },
+    "sort-by": "id",
+    "format": "{icon}",
+    "format-icons": {
+      "default": " 󰣑 ",
+      "active": " 󰣑 "
+    },
+    "on-click": "active"
+  },
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", " "]
+    },
+    "on-click": "~/.config/waybar/scripts/volumecontrol-toggle.sh"
+  },
+  "custom/lightcontrol": {
+    "format": "󰃟 {}",
+    "exec": "brightnessctl -m | cut -d, -f4",
+    "interval": 1,
+    "on-click": "~/.config/waybar/scripts/lightcontrol-toggle.sh"
+  },
+  "custom/battery": {
+    "exec": "~/.config/waybar/scripts/battery.sh",
+    "interval": 2,
+    "tooltip": false
+  },
+  "network": {
+    "format-ethernet": "󰈁 Ethernet",
+    "format-wifi": "󰤨 Wifi",
+    "format-disconnected": "󰤫  Disconnected",
+    "on-click": "~/.config/waybar/scripts/networkmanager-toggle.sh"
+  },
+  "custom/time": {
+    "exec": "date +\"%H:%M:%S\"",
+    "interval": 1,
+    "format": "󱑅 {}"
+  },
+  "custom/date": {
+    "exec": "(date +\"%a %d/%m/%Y\"; while sleep $(( $(date -d \"tomorrow 00:00:00\" +%s) - $(date +%s) )); do date +\"%a %d/%m/%Y\"; done)",
+    "format": "󰃭 {}"
+  },
+  "custom/lock": {
+    "on-click": "hyprlock",
+    "format": ""
+  },
+  "custom/reboot": {
+    "on-click": "shutdown --reboot now",
+    "format": ""
+  },
+  "custom/power": {
+    "on-click": "shutdown -h now",
+    "format": ""
+  }
+}

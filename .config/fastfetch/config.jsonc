@@ -1,0 +1,254 @@
+//------------------------------------------------------------------------------
+// seven's config for fastfetch. You can find the ascii art in this same folder.
+//------------------------------------------------------------------------------
+
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "source": "~/.config/fastfetch/mimikyu.ascii",
+    "padding": {
+      "left": 2,
+      "right": 2,
+      "top": 5
+    },
+    "color": {
+      "1": "#F2CDCD"
+    }
+  },
+  "display": {
+    "separator": ">  ",
+    "color": {
+      "separator": "#cdd6f4"
+    },
+    "constants": [
+      "─────────────────────────────────────────────────────",
+      "│\u001b[53C│\u001b[53D"
+    ]
+  },
+  "general": {
+    "playerName": "SoundCloud - "
+  },
+
+  "modules": [
+    // Hardware
+    {
+      "format": "╭{$1}╮\u001b[54D  Hardware ",
+      "key": " ",
+      "outputColor": "#f38ba8",
+      "type": "custom"
+    },
+    {
+      "key": "{$2}  󰓹  PC         ",
+      "type": "host",
+      "outputColor": "#f38ba8",
+      "keyColor": "#f38ba8",
+      "format": "{name}"
+    },
+    {
+      "key": "{$2}    Type       ",
+      "type": "chassis",
+      "outputColor": "#f38ba8",
+      "keyColor": "#f38ba8",
+      "format": "{type}"
+    },
+    {
+      "key": "{$2}    CPU        ",
+      "type": "cpu",
+      "outputColor": "#f38ba8",
+      "keyColor": "#f38ba8",
+      "format": "{name}"
+    },
+    {
+      "key": "{$2}  󰾲  GPU        ",
+      "type": "gpu",
+      "outputColor": "#f38ba8",
+      "keyColor": "#f38ba8",
+      "format": "{name}"
+    },
+    {
+      "key": "{$2}  󰉉  Disk       ",
+      "type": "disk",
+      "outputColor": "#f38ba8",
+      "keyColor": "#f38ba8",
+      "format": "{size-used} / {size-total}"
+    },
+    {
+      "key": "{$2}    RAM        ",
+      "type": "memory",
+      "outputColor": "#f38ba8",
+      "keyColor": "#f38ba8",
+      "format": "{used} / {total}"
+    },
+    {
+      "format": "╰{$1}╯",
+      "key": " ",
+      "outputColor": "#f38ba8",
+      "type": "custom"
+    },
+
+    // System
+    {
+      "format": "╭{$1}╮\u001b[54D  System ",
+      "key": " ",
+      "outputColor": "#fab387",
+      "type": "custom"
+    },
+    {
+      "key": "{$2}  󰣑  Me         ",
+      "type": "custom",
+      "outputColor": "#fab387",
+      "keyColor": "#fab387",
+      "format": "seven@SPADE"
+    },
+    {
+      "key": "{$2}    OS         ",
+      "type": "os",
+      "outputColor": "#fab387",
+      "keyColor": "#fab387",
+      "format": "{pretty-name}"
+    },
+    {
+      "key": "{$2}  󰒓  Kernel     ",
+      "type": "kernel",
+      "outputColor": "#fab387",
+      "keyColor": "#fab387",
+      "format": "{sysname} {release}"
+    },
+    {
+      "key": "{$2}  󰏖  Packages   ",
+      "type": "packages",
+      "outputColor": "#fab387",
+      "keyColor": "#fab387"
+    },
+    {
+      "key": "{$2}  󱑅  Uptime     ",
+      "type": "uptime",
+      "outputColor": "#fab387",
+      "keyColor": "#fab387"
+    },
+    {
+      "key": "{$2}    WM         ",
+      "type": "custom",
+      "outputColor": "#fab387",
+      "keyColor": "#fab387",
+      "format": "hyprland"
+    },
+    {
+      "format": "╰{$1}╯",
+      "key": " ",
+      "outputColor": "#fab387",
+      "type": "custom"
+    },
+
+    // Software
+    {
+      "format": "╭{$1}╮\u001b[54D 󰲌 Software ",
+      "key": " ",
+      "outputColor": "#f9e2af",
+      "type": "custom"
+    },
+    {
+      "key": "{$2}    Shell      ",
+      "type": "shell",
+      "outputColor": "#f9e2af",
+      "keyColor": "#f9e2af"
+    },
+    {
+      "key": "{$2}    TTY        ",
+      "type": "terminal",
+      "outputColor": "#f9e2af",
+      "keyColor": "#f9e2af",
+      "format": "{pretty-name}"
+    },
+    {
+      "key": "{$2}  󱔓  Topbar     ",
+      "type": "custom",
+      "outputColor": "#f9e2af",
+      "keyColor": "#f9e2af",
+      "format": "waybar"
+    },
+    {
+      "key": "{$2}  󱓞  Launcher   ",
+      "type": "custom",
+      "outputColor": "#f9e2af",
+      "keyColor": "#f9e2af",
+      "format": "wofi"
+    },
+    {
+      "key": "{$2}    Locker     ",
+      "type": "custom",
+      "outputColor": "#f9e2af",
+      "keyColor": "#f9e2af",
+      "format": "hyprlock"
+    },
+    {
+      "key": "{$2}  󰚢  Notifs     ",
+      "type": "custom",
+      "outputColor": "#f9e2af",
+      "keyColor": "#f9e2af",
+      "format": "mako"
+    },
+    {
+      "key": "{$2}    IDE        ",
+      "type": "custom",
+      "outputColor": "#f9e2af",
+      "keyColor": "#f9e2af",
+      "format": "Visual Studio Code"
+    },
+    {
+      "format": "╰{$1}╯",
+      "key": " ",
+      "outputColor": "#f9e2af",
+      "type": "custom"
+    },
+
+    // Rice
+    {
+      "format": "╭{$1}╮\u001b[54D 󰟪 Aesthetics ",
+      "key": " ",
+      "outputColor": "#a6e3a1",
+      "type": "custom"
+    },
+    {
+      "key": "{$2}  󰌁  Theme      ",
+      "type": "custom",
+      "outputColor": "#a6e3a1",
+      "keyColor": "#a6e3a1",
+      "format": "Catppuccin Mocha Flamingo"
+    },
+    {
+      "key": "{$2}    Font       ",
+      "type": "custom",
+      "outputColor": "#a6e3a1",
+      "keyColor": "#a6e3a1",
+      "format": "DM Mono Nerd Font (self-patched)"
+    },
+    {
+      "key": "{$2}    Icons      ",
+      "type": "custom",
+      "outputColor": "#a6e3a1",
+      "keyColor": "#a6e3a1",
+      "format": "Papirus-Dark + Catppuccin stuff"
+    },
+    {
+      "key": "{$2}  󰇀  Cursor     ",
+      "type": "custom",
+      "outputColor": "#a6e3a1",
+      "keyColor": "#a6e3a1",
+      "format": "Catppuccin Mocha Flamingo"
+    },
+    {
+      "key": "{$2}    Colors     ",
+      "type": "colors",
+      "keyColor": "#a6e3a1",
+      "symbol": "circle"
+    },
+    {
+      "format": "╰{$1}╯",
+      "key": " ",
+      "outputColor": "#a6e3a1",
+      "type": "custom"
+    }
+  ]
+}

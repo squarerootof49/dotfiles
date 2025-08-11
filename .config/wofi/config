@@ -1,0 +1,19 @@
+#-------------------------
+# seven's config for wofi.
+#-------------------------
+
+
+show=drun
+width=750
+height=400
+always_parse_args=true
+allow_images=true
+show-icons=true
+show_all=false
+term=ghostty
+hide_scroll=true
+print_command=true
+insensitive=true
+prompt=
+columns=2
+no_actions=true
