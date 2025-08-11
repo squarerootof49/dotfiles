@@ -1,4 +1,4 @@
-# Seven's Arch & hyprland dotfiles
+# seven's Arch & hyprland dotfiles
 I have no idea why you're here. Please don't do this. My dotfiles make no sense, I made all of this while I was new to Linux, and I still am. I have barely any idea as to how or why this works. Use at your own discretion.
 
 ## Screenshots
@@ -20,9 +20,8 @@ Stuff I used:
 - thunar
 - ghostty
 - hyprlock
-- vivaldi
 
 ## Instructions
 Pfft. Imagine I provided instructions as to how to install something barely know how I installed myself.
 
-# Good luck passerby.
+# Good luck, passerby.
